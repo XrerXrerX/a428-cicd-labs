@@ -24,6 +24,9 @@ pipeline {
         }
         stage('deliver') { 
             steps {
+                script {
+                    sleep(time: 60, unit: 'SECONDS')
+                }
                 sh './jenkins/scripts/kill.sh' 
             }
         }
