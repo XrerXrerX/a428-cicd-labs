@@ -24,7 +24,6 @@ pipeline {
         }
         stage('deliver') { 
             steps {
-                input message: 'Sudah selesai menggunakan React App? (Klik "Proceed" untuk mengakhiri)' 
                 sh './jenkins/scripts/kill.sh' 
             }
         }
